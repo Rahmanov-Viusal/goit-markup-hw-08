@@ -1,0 +1,55 @@
+.section-hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  background-color: $bg-footer;
+}
+.section-hero__overlay {
+  margin: 0 auto;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/overlay-img/occupation.img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.section-hero__title {
+  display: block;
+  max-width: 360px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  color: $bg-main-page-color;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+  letter-spacing: 0.06em;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+.section-hero__button {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .section-hero__overlay {
+    max-width: 1600px;
+  }
+  .section-hero__title {
+    max-width: 696px;
+
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}

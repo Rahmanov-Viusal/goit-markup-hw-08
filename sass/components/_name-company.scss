@@ -1,0 +1,19 @@
+.name-company {
+  padding: 16px 0px 16px;
+
+  color: $name-color;
+  font-family: Raleway;
+
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .name-company {
+    padding: 26px 0px 26px;
+
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
