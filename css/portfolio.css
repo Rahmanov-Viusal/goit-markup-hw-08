@@ -321,6 +321,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 48px 40px;
   position: fixed;
   top: 0;
@@ -329,17 +335,18 @@ body {
   height: 100vh;
   background-color: #ffffff;
   z-index: 100;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: visible;
+  pointer-events: none;
+  overflow: scroll;
+  opacity: 0;
 }
 
 .is-open {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
 }
 
 .mobile-menu__button {
@@ -379,6 +386,10 @@ body {
 }
 
 .mobile-menu-nav__link:hover, .mobile-menu-nav__link:focus {
+  color: #2196f3;
+}
+
+.mobile-menu-nav__link--current {
   color: #2196f3;
 }
 

@@ -45,7 +45,7 @@
           </ul>
         </nav>
 
-        <button class="burger-btn" type="button">
+        <button class="burger-btn" type="button" data-menu-button>
           <svg class="burger-btn__icon" width="40" height="40">
             <use href="./img/sprite/symbol-defs.svg#icon-mobile_menu"></use>
           </svg>
@@ -73,6 +73,94 @@
             >
           </li>
         </ul>
+      </div>
+      <!-- mobile menu -->
+      <div class="mobile-menu" data-menu>
+        <button class="mobile-menu__button" type="button" data-menu-close>
+          <svg class="mobile-menu__icon" width="40" height="40">
+            <use
+              href="./img/sprite/symbol-defs.svg#icon-close_mobile-menu"
+            ></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-nav__list">
+            <li class="mobile-menu-nav__item">
+              <a class="mobile-menu-nav__link" href="index.html">Студия</a>
+            </li>
+            <li class="mobile-menu-nav__item">
+              <a
+                class="mobile-menu-nav__link mobile-menu-nav__link--current"
+                href="#"
+              >
+                Портфолио</a
+              >
+            </li>
+            <li class="mobile-menu-nav__item">
+              <a class="mobile-menu-nav__link" href="#contact">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="mobile-menu__box-flex">
+          <ul class="mobile-menu-contact">
+            <li class="mobile-menu-contact__list">
+              <a
+                class="mobile-menu-contact__link-phone"
+                href="tel:+380961111111"
+              >
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu-contact__list">
+              <a
+                class="mobile-menu-contact__link-mail"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+
+          <ul class="mobile-menu-social">
+            <li class="mobile-menu-social__item">
+              <a
+                class="mobile-menu-social__link"
+                href="https://www.instagram.com/?hl=ru"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+            </li>
+            <li class="mobile-menu-social__item">
+              <a
+                class="mobile-menu-social__link"
+                href="https://twitter.com/?lang=ru"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Twitter</a
+              >
+            </li>
+            <li class="mobile-menu-social__item">
+              <a
+                class="mobile-menu-social__link"
+                href="https://uk-ua.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Facebook</a
+              >
+            </li>
+            <li class="mobile-menu-social__item">
+              <a
+                class="mobile-menu-social__link"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <!--уникальный контент-->
@@ -463,5 +551,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
