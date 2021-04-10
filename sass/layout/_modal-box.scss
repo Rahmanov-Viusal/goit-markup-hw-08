@@ -1,18 +1,17 @@
 .modal-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 40px 40px;
+  position: relative;
+  // top: 50%;
+  // left: 50%;
 
-  width: 528px;
-  height: 581px;
+  padding: 40px 40px;
+  width: 100%;
 
   background-color: $bg-main-page-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  transform: scale(1) rotate(360deg);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-box__close {
@@ -46,14 +45,12 @@
 }
 .modal-box__title {
   margin-bottom: 12px;
-
   display: block;
-  height: 23px;
 
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -140,14 +137,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   margin: 10px 0px 30px;
 
-  text-align: center;
-
+  text-align: end;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
 
   color: $desc-text-color;
@@ -164,8 +161,9 @@
 .modal-form__check-mark-custom {
   display: inline-block;
   margin-right: 7px;
-  height: 15px;
-  width: 16px;
+
+  min-height: 15px;
+  min-width: 16px;
 
   border-radius: 2px;
   border: 2px solid $project-title-color;
@@ -195,5 +193,30 @@
 
   &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .modal-box {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-box {
+    max-width: 528px;
+    max-height: 581px;
+  }
+  .modal-form__agreements {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }

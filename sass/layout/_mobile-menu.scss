@@ -1,0 +1,120 @@
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 48px 40px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $color-contact-footer;
+  z-index: 100;
+
+  transform: translateY(-100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-open {
+  transform: translateY(0%);
+}
+.mobile-menu__button {
+  position: absolute;
+
+  top: 10px;
+  right: 15px;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  color: $project-title-color;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $bg-button-color;
+  }
+}
+.mobile-menu__icon {
+  fill: currentColor;
+}
+.mobile-menu-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mobile-menu-nav__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: $project-title-color;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $bg-button-color;
+  }
+}
+
+.mobile-menu-contact__link-phone {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  color: $bg-button-color;
+}
+.mobile-menu-contact__link-mail {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+
+  color: $desc-text-color;
+}
+.mobile-menu-contact__list:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mobile-menu-social__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+
+  letter-spacing: 0.02em;
+
+  color: $bg-button-color;
+  text-decoration: none;
+}
+.mobile-menu-social {
+  margin-top: 62px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile-menu-social__item {
+  &:not(:last-child)::after {
+    content: "";
+    width: 22px;
+    height: 0px;
+    margin: 0 10px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}

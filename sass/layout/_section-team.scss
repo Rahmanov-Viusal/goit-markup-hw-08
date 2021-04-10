@@ -8,13 +8,8 @@
 .section-team__title {
   margin-bottom: 30px;
 }
-.section-team__list {
-  // display: flex;
-}
-.section-team__item {
-  // flex-basis: calc((100%-90px) / 4);
-  // margin-right: 30px;
 
+.section-team__item {
   padding-bottom: 30px;
 
   background-color: $button-color;
@@ -24,11 +19,8 @@
   &:not(:last-child) {
     margin-bottom: 30px;
   }
-
-  // &:nth-child(4n) {
-  //   margin-right: 0px;
-  // }
 }
+
 .section-team__name {
   margin-top: 30px;
 
@@ -49,11 +41,6 @@
 }
 .section-team__social {
   margin-top: 17px;
-  // padding: 0px 32px 0px;
-
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
 }
 .section-team__img {
   width: 100%;
