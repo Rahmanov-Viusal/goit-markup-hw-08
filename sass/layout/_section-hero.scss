@@ -6,16 +6,29 @@
 }
 .section-hero__overlay {
   margin: 0 auto;
+  height: auto;
+  max-width: 480px;
 
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../img/overlay-img/occupation.img.jpg);
+    url(../img/overlay-img/mobile/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/overlay-img/mobile/hero@2x.jpg);
+  }
 }
+
 .section-hero__title {
   display: block;
   max-width: 360px;
@@ -37,7 +50,26 @@
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 481px) {
+  .section-hero__overlay {
+    max-width: 1199px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/overlay-img/tablet/hero.jpg);
 
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/overlay-img/tablet/hero@2x.jpg);
+    }
+  }
+}
 @media screen and (min-width: 1200px) {
   .section-hero {
     padding-top: 200px;
@@ -51,5 +83,23 @@
 
     font-size: 44px;
     line-height: 1.36;
+  }
+  .section-hero__overlay {
+    max-width: 1600px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/overlay-img/desktop/hero.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/overlay-img/desktop/hero@2x.jpg);
+    }
   }
 }
