@@ -66,7 +66,10 @@
   }
 
   .section-feature__item {
-    width: 270px;
     flex-basis: calc((100% - 120px) / 4);
+
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
   }
 }

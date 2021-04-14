@@ -885,9 +885,11 @@ body {
     padding-bottom: 47px;
   }
   .section-feature__item {
-    width: 270px;
     -ms-flex-preferred-size: calc((100% - 120px) / 4);
         flex-basis: calc((100% - 120px) / 4);
+  }
+  .section-feature__item:not(:last-child) {
+    margin-bottom: 0px;
   }
 }
 
@@ -1674,6 +1676,9 @@ body {
 @media screen and (max-width: 1199px) {
   .modal-box {
     max-width: 450px;
+  }
+  .modal-form__marker:focus-within {
+    color: #2196f3;
   }
 }
 
